@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('thumb')->nullable();
             $table->smallInteger('price')->nullable();
-            $table->string('series')->nullable();
+            $table->string('series', 50)->nullable();
             $table->dateTime('sale_date')->nullable();
             $table->string('type')->nullable();
             $table->text('artists')->nullable();
