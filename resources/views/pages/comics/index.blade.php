@@ -14,19 +14,21 @@
             <div class="container pt-5 pb-4">
                 <div class="row">
                     @forelse($comics as $elem)
-                        <div class="col-2 mb-5">
+                        <div class="col-2">
                             <div class="card h-100 bg-transparent border-0">
-                                <a href="{{ route('comics.show', ['comic' => $elem->id]) }}">
-                                    <img src="{{ $elem->thumb }}" alt="{{ $elem->title }}" class="pb-3">
-                                    <h4 class="text-light ">{{ $elem->title }}</h4>
-                                </a>
-                                <div class="d-flex">
-                                    <a class="m-auto mt-4 btn btn-warning" href="{{ route('comics.edit', $elem) }}">Edit</a>
-                                    <form action="{{ route('comics.destroy', $elem) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="m-auto mt-4 btn btn-danger">delete</button>
-                                    </form>
+                                <div class="card-body p-0 d-flex flex-column justify-content-between">
+                                    <a href="{{ route('comics.show', ['comic' => $elem->id]) }}">
+                                        <img src="{{ $elem->thumb }}" alt="{{ $elem->title }}" class="pb-3">
+                                        <h4 class="text-light ">{{ $elem->title }}</h4>
+                                    </a>
+                                    <div class="d-flex mb-5 mt-3">
+                                        <a class="m-auto btn btn-warning" href="{{ route('comics.edit', $elem) }}">Edit</a>
+                                        <form class="m-auto" action="{{ route('comics.destroy', $elem) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">delete</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
