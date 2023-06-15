@@ -55,6 +55,9 @@ class ComicsController extends Controller
      */
     public function show($id)
     {
+        $singoloComic = Comics::findOrFail($id);
+
+        return view('pages.comics.show', compact('singoloComic'));
     }
 
     /**
