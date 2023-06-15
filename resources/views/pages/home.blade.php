@@ -13,14 +13,16 @@
             </div>
             <div class="container pt-5 pb-4">
                 <div class="row">
-                    @foreach ($comics as $elem)
+                    @forelse($comics as $elem)
                         <div class="col-2">
-                            <a href="{{ route('details', ['link' => $elem['link']]) }}">
-                                <img src="{{ $elem['thumb'] }}" alt="{{ $elem['title'] }}" class="pb-3">
-                                <h4 class="text-light mb-5">{{ $elem['title'] }}</h4>
+                            <a href="{{ route('comics.index') }}">
+                                <img src="{{ $elem->thumb }}" alt="{{ $elem->title }}" class="pb-3">
+                                <h4 class="text-light mb-5">{{ $elem->title }}</h4>
                             </a>
                         </div>
-                    @endforeach
+                    @empty
+                        <h2 class="text-danger text-center text-uppercase">Non ci sono record nel DB!!</h2>
+                    @endforelse
                 </div>
             </div>
             <div class="text-center pb-5">

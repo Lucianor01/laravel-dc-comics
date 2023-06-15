@@ -11,18 +11,18 @@
             <div class="blue-line"></div>
             <div class="container">
                 <div class="position-relative">
-                    <img class="img-top" src="{{ $singleComics['thumb'] }}" alt="{{ $singleComics['title'] }}">
+                    <img class="img-top" src="{{ $comics->thumb }}" alt="{{ $comics->title }}">
                 </div>
-                <div id="container-details-comics" class="p-4">
+                <div id="container-details-comics->" class="p-4">
                     <div class="row my-4">
                         <div class="col-8">
-                            <h2 class="card-title mb-3 text-uppercase">{{ $singleComics['title'] }}</h2>
+                            <h2 class="card-title mb-3 text-uppercase">{{ $comics->title }}</h2>
                             <div class="d-flex mb-3 price text-light justify-content-between">
                                 <div class="col-9 border-end border-black">
                                     <div class="d-flex justify-content-between p-2 px-4">
                                         <div>
                                             <span class="c-green">U.S. Price:</span>
-                                            <span>{{ $singleComics['price'] }}</span>
+                                            <span>{{ $comics->price }}</span>
                                         </div>
                                         <div>
                                             <span class="c-green">AVAILABLE</span>
@@ -33,7 +33,7 @@
                                     <span>Check Availability &#9662;</span>
                                 </div>
                             </div>
-                            <p>{{ $singleComics['description'] }}</p>
+                            <p>{{ $comics->description }}</p>
                         </div>
                         <div class="col-4 right-container">
                             <h3 class="text-end">ADVERTISEMENT</h3>
@@ -57,13 +57,13 @@
                             <h5>Art by:</h5>
                         </div>
                         <div class="col-8 border-bottom">
-                            <p class="mb-2">{{ implode(', ', $singleComics['artists']) }}</p>
+                            <p class="mb-2">{{ implode(', ', $comics->artists) }}</p>
                         </div>
                         <div class="col-4 border-bottom mt-2">
                             <h5>Written by:</h5>
                         </div>
                         <div class="col-8 border-bottom mt-2">
-                            <p class="mb-2">{{ implode(', ', $singleComics['writers']) }}</p>
+                            <p class="mb-2">{{ implode(', ', $comics->writers) }}</p>
                         </div>
                     </div>
                 </div>
@@ -74,19 +74,19 @@
                             <h5 class="mb-3">Series:</h5>
                         </div>
                         <div class="col-8 border-bottom my-2">
-                            <p class="mb-3 text-uppercase">{{ $singleComics['series'] }}</p>
+                            <p class="mb-3 text-uppercase">{{ $comics->series }}</p>
                         </div>
                         <div class="col-4 border-bottom my-2">
                             <h5 class="mb-3">U.S. Price:</h5>
                         </div>
                         <div class="col-8 border-bottom my-2">
-                            <span class="mb-3">{{ $singleComics['price'] }}</span>
+                            <span class="mb-3">{{ $comics->price }}</span>
                         </div>
                         <div class="col-4 border-bottom my-2">
                             <h5 class="mb-3">On Sale Date:</h5>
                         </div>
                         <div class="col-8 border-bottom my-2">
-                            <span class="mb-3">{{ date('M d Y', strtotime($singleComics['sale_date'])) }}</span>
+                            <span class="mb-3">{{ date('M d Y', strtotime($comics->sale_date)) }}</span>
                         </div>
                     </div>
                 </div>

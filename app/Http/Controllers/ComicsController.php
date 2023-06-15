@@ -38,7 +38,13 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+
+        $newComics = new Comics();
+        $newComics->fill($form_data);
+        $newComics->save();
+
+        return redirect()->route('comics.index');
     }
 
     /**
@@ -47,9 +53,8 @@ class ComicsController extends Controller
      * @param  \App\Models\Comics  $comics
      * @return \Illuminate\Http\Response
      */
-    public function show(Comics $comics)
+    public function show($id)
     {
-        //
     }
 
     /**
