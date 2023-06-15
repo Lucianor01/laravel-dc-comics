@@ -14,11 +14,12 @@
             <div class="container pt-5 pb-4">
                 <div class="row">
                     @forelse($comics as $elem)
-                        <div class="col-2">
+                        <div class="col-2 mb-5">
                             <a href="{{ route('comics.show', ['comic' => $elem->id]) }}">
                                 <img src="{{ $elem->thumb }}" alt="{{ $elem->title }}" class="pb-3">
-                                <h4 class="text-light mb-5">{{ $elem->title }}</h4>
+                                <h4 class="text-light ">{{ $elem->title }}</h4>
                             </a>
+                            <a class="m-auto mt-4 d-table" href="{{ route('comics.edit', $elem) }}">Modifica</a>
                         </div>
                     @empty
                         <h2 class="text-danger text-center text-uppercase">Non ci sono record nel DB!!</h2>
