@@ -7,27 +7,15 @@
 @section('content')
     {{-- ! SECTION 1 HOME --}}
     <section id="sectionCSeries">
-        <div id="containerSeries">
-            <div id="titleCS" class="position-absolute">
-                <h3>CURRENT SERIES</h3>
-            </div>
-            <div class="container pt-5 pb-4">
-                <div class="row">
-                    @forelse($comics as $elem)
-                        <div class="col-2">
-                            <a href="{{ route('comics.index') }}">
-                                <img src="{{ $elem->thumb }}" alt="{{ $elem->title }}" class="pb-3">
-                                <h4 class="text-light mb-5">{{ $elem->title }}</h4>
-                            </a>
-                        </div>
-                    @empty
-                        <h2 class="text-danger text-center text-uppercase">Non ci sono record nel DB!!</h2>
-                    @endforelse
-                </div>
-            </div>
-            <div class="text-center pb-5">
-                <a class="button-load" href="#">LOAD MORE</a>
-            </div>
+        <div class="container text-light text-center p-5" id="home-link">
+            <ul class="d-flex justify-content-around list-unstyled mb-0">
+                <li>
+                    <a class="text-decoration-none" href="{{ route('comics.index') }}">Index</a>
+                </li>
+                <li>
+                    <a class="text-decoration-none" href="{{ route('comics.create') }}">Create</a>
+                </li>
+            </ul>
         </div>
     </section>
     {{-- ! SECTION 2 HOME --}}

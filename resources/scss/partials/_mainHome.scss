@@ -16,7 +16,23 @@ main {
         position: relative;
         background-color: #1c1c1c;
 
+        #home-link {
+
+            a {
+                padding: 10px 60px;
+                color: white;
+                background-color: #0282f9;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: #0282f983;
+                }
+            }
+        }
+
         #containerSeries {
+
 
             #titleCS {
                 top: -25px;

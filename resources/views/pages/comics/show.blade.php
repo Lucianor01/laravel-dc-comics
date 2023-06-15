@@ -13,7 +13,7 @@
                 <div class="position-relative">
                     <img class="img-top" src="{{ $singoloComic->thumb }}" alt="{{ $singoloComic->title }}">
                 </div>
-                <div id="container-details-comics->" class="p-4">
+                <div id="container-details-comics" class="p-4">
                     <div class="row my-4">
                         <div class="col-8">
                             <h2 class="card-title mb-3 text-uppercase">{{ $singoloComic->title }}</h2>
@@ -41,7 +41,6 @@
                                 alt="adv">
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

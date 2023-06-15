@@ -7,7 +7,10 @@
     </div>
     <nav class="container">
         <div>
-            <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo">
+            <a href="{{ route('home') }}">
+                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo">
+            </a>
+
         </div>
 
         <div>
