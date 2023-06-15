@@ -1,0 +1,106 @@
+main {
+
+    #jumbotron {
+        div {
+            img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
+
+    #sectionCSeries {
+
+        position: relative;
+        background-color: #1c1c1c;
+
+        #containerSeries {
+
+            #titleCS {
+                top: -25px;
+                left: 303px;
+
+
+                h3 {
+                    padding: 10px 20px;
+                    font-size: 25px;
+                    color: white;
+                    background-color: #0282f9;
+                }
+            }
+
+            div {
+
+                .button-load {
+                    padding: 10px 60px;
+                    color: white;
+                    background-color: #0282f9;
+                    text-decoration: none;
+                    font-weight: bold;
+
+                    &:hover {
+                        background-color: #0282f983;
+                    }
+
+                }
+            }
+
+            .col-2 {
+
+                a {
+
+                    text-decoration: none;
+
+                    &:hover {
+                        filter: brightness(0.5);
+                    }
+
+                    img {
+                        width: 100%;
+                        min-width: 150px;
+                        height: 300px;
+                    }
+
+                    h4 {
+                        font-size: 15px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    .section_2 {
+
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+
+        a {
+
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                text-decoration-color: white;
+            }
+
+            .section2_img {
+                width: 45px;
+            }
+
+            #section2_img {
+                width: 32px;
+            }
+
+            .fs {
+                font-size: 13px;
+            }
+
+        }
+
+    }
+
+}
