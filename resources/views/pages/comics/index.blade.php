@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('titlePage')
-    Comics DC | Details
+    Comics DC | Comics Details
 @endsection
 
 @section('content')
