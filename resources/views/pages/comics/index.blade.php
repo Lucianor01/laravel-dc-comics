@@ -26,7 +26,8 @@
                                         <form class="m-auto" action="{{ route('comics.destroy', $elem) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">delete</button>
+                                            <button onclick="return cancellaElem()" type="submit"
+                                                class="btn btn-danger">delete</button>
                                         </form>
                                     </div>
                                 </div>
@@ -84,4 +85,10 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('scripts-custom')
+    function cancellaElem(){
+    return confirm('Sei sicuro di voler cancellare il fumetto?')
+    }
 @endsection
