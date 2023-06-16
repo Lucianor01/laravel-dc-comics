@@ -91,8 +91,13 @@
                 </div>
             </div>
         </div>
-        <div class="text-center container-button-home">
-            <a class="button-home" href="{{ route('home') }}">Home</a>
+        <div class="d-flex  justify-content-center gap-5">
+            <div class="text-center container-button-home ">
+                <a class="button-home" href="{{ route('home') }}">Home</a>
+            </div>
+            <div class="text-center container-button-home">
+                <a class="button-home" href="{{ route('comics.index') }}">Comics</a>
+            </div>
         </div>
     </section>
     {{-- ! SECTION DETAILS 3 --}}

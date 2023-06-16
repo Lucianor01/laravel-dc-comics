@@ -53,7 +53,10 @@
                     <label class="form-label" for="">writers</label>
                     <input class="form-control" type="text" name="writers">
                 </div>
-                <button type="submit" class="btn btn-primary mt-3">Crea Fumetto</button>
+                <div>
+                    <button type="submit" class="btn btn-primary mt-3">Crea Fumetto</button>
+                    <a href="{{ route('home') }}" class="btn btn-primary mt-3 ms-3">Home</a>
+                </div>
             </form>
         </div>
     </div>

@@ -58,7 +58,10 @@
                     <input class="form-control" type="text" name="writers"
                         value="{{ old('writers') ?? $comic->writers }}">
                 </div>
-                <button type="submit" class="btn btn-primary mt-3">Edit Comic</button>
+                <div>
+                    <button type="submit" class="btn btn-primary mt-3">Edit Comic</button>
+                    <a href="{{ route('home') }}" class="btn btn-primary mt-3 ms-3">Home</a>
+                </div>
             </form>
         </div>
     </div>
