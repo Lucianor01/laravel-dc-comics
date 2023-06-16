@@ -110,6 +110,36 @@ class ComicsController extends Controller
      */
     public function update(Request $request, Comics $comic)
     {
+
+        $request->validate(
+            [
+                'title' => 'required|max:50|unique:comics',
+                'description' => 'required',
+                'thumb' => 'nullable|url',
+                'price' => 'required|numeric',
+                'series' => 'required',
+                'sale_date' => 'required|date',
+                'type' => 'required',
+                'artists' => 'required',
+                'writers' => 'required',
+            ],
+            [
+                'title.required' => 'Il campo Titolo è obbligatorio.',
+                'title.max' => 'Il campo Titolo non deve superare i 50 caratteri.',
+                'title.unique' => 'Il Titolo è già stato preso.',
+                'description.required' => 'Il campo Descrizione è obbligatorio.',
+                'thumb.url' => 'Il campo Thumb deve essere un URL valido.',
+                'price.required' => 'Il campo Prezzo è obbligatorio.',
+                'price.numeric' => 'Il campo Prezzo deve essere un numero.',
+                'series.required' => 'Il campo Serie è obbligatorio.',
+                'sale_date.required' => 'Il campo Data di Vendita è obbligatorio.',
+                'sale_date.date' => 'Il campo Data di Vendita deve essere una data valida.',
+                'type.required' => 'Il campo Tipo è obbligatorio.',
+                'artists.required' => 'Il campo Artisti è obbligatorio.',
+                'writers.required' => 'Il campo Scrittori è obbligatorio.',
+            ]
+        );
+
         $form_data = $request->all();
         $comic->update($form_data);
 
