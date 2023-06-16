@@ -11,6 +11,18 @@
             <div id="titleCS" class="position-absolute">
                 <h3>CURRENT SERIES</h3>
             </div>
+            {{-- ! ALERT CREAZIONE COMIC --}}
+            <div class="container">
+                @if (Session::has('success'))
+                    {
+                    <div class="alert alert-success alert-dismissible fade show mt-3">
+                        <strong>{{ Session::get('success') }}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    }
+                @endif
+            </div>
+            {{-- ! CONTAINER COMICS --}}
             <div class="container pt-5 pb-4">
                 <div class="row">
                     @forelse($comics as $elem)

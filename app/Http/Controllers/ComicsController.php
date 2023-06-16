@@ -74,7 +74,7 @@ class ComicsController extends Controller
         $newComics->fill($form_data);
         $newComics->save();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('success', 'Complimenti hai creato un Fumetto!');
     }
 
     /**
